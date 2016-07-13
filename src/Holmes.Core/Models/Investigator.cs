@@ -35,9 +35,27 @@ namespace Holmes.Core.Models
     public class Investigator : Actor
     {
         /// <summary>
-        /// Gets or sets the length of time that each interrogation takes
+        /// The interrogation time.
         /// </summary>
-        public TimeSpan InterrogationTime { get; set; }
+        private TimeSpan interrogationTime;
+
+        /// <summary>
+        /// Gets or sets the length of time that each interrogation takes.
+        /// Setting this will also set the remaining time to the same value.
+        /// </summary>
+        public TimeSpan InterrogationTime
+        {
+            get
+            {
+                return this.interrogationTime;
+            }
+
+            set
+            {
+                this.interrogationTime = value;
+                this.RemainingInterrogationTime = value;
+            }
+        }
 
         /// <summary>
         /// Gets or sets the Interrogation time remaining for the current suspect
