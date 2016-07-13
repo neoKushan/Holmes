@@ -19,7 +19,30 @@ namespace Holmes.Infrastructure.Services
     /// </summary>
     public class SimpleWorldLoader : IWorldRepository
     {
-        private object interrogationRoomService;
+        /// <summary>
+        /// The interrogation room service.
+        /// </summary>
+        private readonly IInterrogationRoomRepository interrogationRoomService;
+
+        /// <summary>
+        /// The investigator repository.
+        /// </summary>
+        private readonly IInvestigatorRepository investigatorService;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SimpleWorldLoader"/> class.
+        /// </summary>
+        /// <param name="interrogationRoomService">
+        /// The interrogation room service.
+        /// </param>
+        /// <param name="investigatorService">
+        /// The investigator Service.
+        /// </param>
+        public SimpleWorldLoader(IInterrogationRoomRepository interrogationRoomService, IInvestigatorRepository investigatorService)
+        {
+            this.interrogationRoomService = interrogationRoomService;
+            this.investigatorService = investigatorService;
+        }
 
         /// <summary>
         /// Creates the world as defined by the brief
@@ -29,12 +52,11 @@ namespace Holmes.Infrastructure.Services
         /// </returns>
         public World GetWorld()
         {
-            object investigatorService;
             World world = new World
                               {
                                   CurrentTime = DateTime.Now,
-                                  Investigators = investigatorService.GetInvestigators(),
-                                  InterrogationRooms = interrogationRoomService.GetInterrogationRooms()
+                                  Investigators = this.investigatorService.GetInvestigators(),
+                                  InterrogationRooms = this.interrogationRoomService.GetInterrogationRooms()
                               };
 
             return world;
