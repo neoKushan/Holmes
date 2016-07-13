@@ -9,6 +9,7 @@
 
 namespace Holmes.Core.Models
 {
+    using System;
     using System.Collections.Generic;
 
     /// <summary>
@@ -25,5 +26,10 @@ namespace Holmes.Core.Models
         /// Gets or sets the list of investigators present within the world
         /// </summary>
         public List<Investigator> Investigators { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current time of the world
+        /// </summary>
+        public DateTime CurrentTime { get; set; }
     }
 }
