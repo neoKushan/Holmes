@@ -9,6 +9,8 @@
 
 namespace Holmes.Core.Models
 {
+    using Holmes.Core.BaseClasses;
+
     /// <summary>
     /// The movement direction.
     /// </summary>
@@ -28,7 +30,7 @@ namespace Holmes.Core.Models
     /// <summary>
     /// The investigator will be interrogating the suspects
     /// </summary>
-    public class Investigator
+    public class Investigator : Actor
     {
         /// <summary>
         /// Gets or sets the length of time, in seconds, that each interrogation takes
