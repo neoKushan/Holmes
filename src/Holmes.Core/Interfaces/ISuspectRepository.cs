@@ -1,12 +1,10 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="ISuspectRepository.cs" company="">
-//   
 // </copyright>
 // <summary>
 //   The SuspectRepository interface.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Holmes.Core.Interfaces
 {
     using System.Collections.Generic;

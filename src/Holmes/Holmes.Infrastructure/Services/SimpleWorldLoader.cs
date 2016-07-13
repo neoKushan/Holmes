@@ -1,12 +1,10 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="SimpleWorldLoader.cs" company="">
-//   
 // </copyright>
 // <summary>
 //   Defines the SimpleWorldLoader type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Holmes.Infrastructure.Services
 {
     using System;
@@ -38,7 +36,9 @@ namespace Holmes.Infrastructure.Services
         /// <param name="investigatorService">
         /// The investigator Service.
         /// </param>
-        public SimpleWorldLoader(IInterrogationRoomRepository interrogationRoomService, IInvestigatorRepository investigatorService)
+        public SimpleWorldLoader(
+            IInterrogationRoomRepository interrogationRoomService, 
+            IInvestigatorRepository investigatorService)
         {
             this.interrogationRoomService = interrogationRoomService;
             this.investigatorService = investigatorService;
@@ -54,10 +54,18 @@ namespace Holmes.Infrastructure.Services
         {
             World world = new World
                               {
-                                  CurrentTime = DateTime.Now,
-                                  Investigators = this.investigatorService.GetInvestigators(),
+                                  CurrentTime = DateTime.Now, 
+                                  Investigators = this.investigatorService.GetInvestigators(), 
                                   InterrogationRooms = this.interrogationRoomService.GetInterrogationRooms()
                               };
+
+            // Now set up the default world by placing the investigators into their respective rooms.
+            world.InterrogationRooms.Find(x => x.Suspect.Name == "Mustard")
+                .Investigators.Add(world.Investigators.Find(x => x.Name == "Holmes"));
+            world.InterrogationRooms.Find(x => x.Suspect.Name == "White")
+                .Investigators.Add(world.Investigators.Find(x => x.Name == "Watson"));
+            world.InterrogationRooms.Find(x => x.Suspect.Name == "Mustard")
+                .Investigators.Add(world.Investigators.Find(x => x.Name == "Wellington"));
 
             return world;
         }

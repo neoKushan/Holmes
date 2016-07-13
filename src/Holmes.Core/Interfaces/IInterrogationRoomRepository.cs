@@ -1,15 +1,14 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="IInterrogationRoomRepository.cs" company="">
-//   
 // </copyright>
 // <summary>
 //   The InterrogationRoomRepository interface.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Holmes.Core.Interfaces
 {
     using System.Collections.Generic;
+
     using Holmes.Core.Models;
 
     /// <summary>

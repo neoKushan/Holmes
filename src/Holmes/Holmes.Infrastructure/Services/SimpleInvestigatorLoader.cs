@@ -27,38 +27,35 @@ namespace Holmes.Infrastructure.Services
         public List<Investigator> GetInvestigators()
         {
             var investigators = new List<Investigator>()
-                                     {
-                                         new Investigator()
-                                             {
-                                                 Name = "Holmes", 
-                                                 InterrogationTime =
-                                                     TimeSpan
-                                                     .FromMinutes(15), 
-                                                 MovementDirection =
-                                                     MovementDirection
-                                                     .Clockwise
-                                             }, 
-                                         new Investigator()
-                                             {
-                                                 Name = "Watson", 
-                                                 InterrogationTime =
-                                                     TimeSpan
-                                                     .FromMinutes(20), 
-                                                 MovementDirection =
-                                                     MovementDirection
-                                                     .Anticlockwise
-                                             }, 
-                                         new Investigator()
-                                             {
-                                                 Name = "Wellington", 
-                                                 InterrogationTime =
-                                                     TimeSpan
-                                                     .FromMinutes(30), 
-                                                 MovementDirection =
-                                                     MovementDirection
-                                                     .Anticlockwise
-                                             }
-                                     };
+                                    {
+                                        new Investigator()
+                                            {
+                                                Name = "Holmes", 
+                                                InterrogationTime =
+                                                    TimeSpan.FromMinutes(15), 
+                                                MovementDirection =
+                                                    MovementDirection.Clockwise, 
+                                                WorksAlone = true
+                                            }, 
+                                        new Investigator()
+                                            {
+                                                Name = "Watson", 
+                                                InterrogationTime =
+                                                    TimeSpan.FromMinutes(20), 
+                                                MovementDirection =
+                                                    MovementDirection.Anticlockwise, 
+                                                WorksAlone = true
+                                            }, 
+                                        new Investigator()
+                                            {
+                                                Name = "Wellington", 
+                                                InterrogationTime =
+                                                    TimeSpan.FromMinutes(30), 
+                                                MovementDirection =
+                                                    MovementDirection.Anticlockwise, 
+                                                WorksAlone = false
+                                            }
+                                    };
 
             return investigators;
         }

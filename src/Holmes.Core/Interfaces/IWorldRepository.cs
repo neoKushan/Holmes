@@ -1,8 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="IWorldRepository.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The WorldLoadingService interface.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Holmes.Core.Interfaces
 {

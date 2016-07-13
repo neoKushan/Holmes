@@ -1,12 +1,10 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="IInvestigationService.cs" company="">
-//   
 // </copyright>
 // <summary>
 //   The InvestigationService interface.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Holmes.Core.Interfaces
 {
     using System;
@@ -22,7 +20,7 @@ namespace Holmes.Core.Interfaces
         /// <summary>
         /// The investigation is currently inconclusive.
         /// </summary>
-        Inconclusive,
+        Inconclusive, 
 
         /// <summary>
         /// The suspect has been found.

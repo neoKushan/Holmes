@@ -1,12 +1,10 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="World.cs" company="">
-//   
 // </copyright>
 // <summary>
 //   Our World class contains everything that's in our world, such as rooms, investigators and suspects
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Holmes.Core.Models
 {
     using System;
@@ -18,6 +16,11 @@ namespace Holmes.Core.Models
     public class World
     {
         /// <summary>
+        /// Gets or sets the current time of the world
+        /// </summary>
+        public DateTime CurrentTime { get; set; }
+
+        /// <summary>
         /// Gets or sets the list of interrogation rooms within the world
         /// </summary>
         public List<InterrogationRoom> InterrogationRooms { get; set; }
@@ -26,10 +29,5 @@ namespace Holmes.Core.Models
         /// Gets or sets the list of investigators present within the world
         /// </summary>
         public List<Investigator> Investigators { get; set; }
-
-        /// <summary>
-        /// Gets or sets the current time of the world
-        /// </summary>
-        public DateTime CurrentTime { get; set; }
     }
 }

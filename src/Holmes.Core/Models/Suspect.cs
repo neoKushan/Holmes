@@ -6,7 +6,6 @@
 //   The suspect of the investigation
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Holmes.Core.Models
 {
     using Holmes.Core.BaseClasses;

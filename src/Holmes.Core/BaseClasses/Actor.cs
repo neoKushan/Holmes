@@ -1,8 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Actor.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   Suspects and investigators will have a base class,
+//   Actor is that base class
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Holmes.Core.BaseClasses
 {

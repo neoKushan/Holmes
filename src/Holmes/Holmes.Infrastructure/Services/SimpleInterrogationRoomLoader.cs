@@ -1,15 +1,14 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="SimpleInterrogationRoomLoader.cs" company="">
-//   
 // </copyright>
 // <summary>
 //   The simple interrogation room loader.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Holmes.Infrastructure.Services
 {
     using System.Collections.Generic;
+
     using Holmes.Core.Interfaces;
     using Holmes.Core.Models;
 
@@ -48,11 +47,7 @@ namespace Holmes.Infrastructure.Services
 
             foreach (var suspect in suspects)
             {
-                rooms.Add(
-                    new InterrogationRoom()
-                        {
-                            Suspect = suspect
-                               });
+                rooms.Add(new InterrogationRoom() { Suspect = suspect });
             }
 
             return rooms;
