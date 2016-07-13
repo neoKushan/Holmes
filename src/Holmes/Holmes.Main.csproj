@@ -7,8 +7,8 @@
     <ProjectGuid>{561BCF2F-8420-456D-8561-01C64DBE3F0C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Holmes</RootNamespace>
-    <AssemblyName>Holmes</AssemblyName>
+    <RootNamespace>Holmes.Main</RootNamespace>
+    <AssemblyName>Holmes.Main</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -1,12 +1,10 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="Investigator.cs" company="">
-//  
 // </copyright>
 // <summary>
 //   Defines the Investigator type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Holmes.Core.Models
 {
     using System;
@@ -21,7 +19,7 @@ namespace Holmes.Core.Models
         /// <summary>
         /// Moves clockwise.
         /// </summary>
-        Clockwise,
+        Clockwise, 
 
         /// <summary>
         /// Moves anticlockwise.
@@ -58,13 +56,19 @@ namespace Holmes.Core.Models
         }
 
         /// <summary>
+        /// Gets or sets the Movement Direction of the Investigator
+        /// </summary>
+        public MovementDirection MovementDirection { get; set; }
+
+        /// <summary>
         /// Gets or sets the Interrogation time remaining for the current suspect
         /// </summary>
         public TimeSpan RemainingInterrogationTime { get; set; }
 
         /// <summary>
-        /// Gets or sets the Movement Direction of the Investigator
+        /// Gets or sets a value indicating whether they work alone or not
+        /// Some investigators (not dogs, apparently) prefer to work alone
         /// </summary>
-        public MovementDirection MovementDirection { get; set; }
+        public bool WorksAlone { get; set; }
     }
 }

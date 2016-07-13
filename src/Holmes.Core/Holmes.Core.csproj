@@ -40,7 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClasses\Actor.cs" />
+    <Compile Include="Interfaces\IInterrogationRoomRepository.cs" />
     <Compile Include="Interfaces\IInvestigationService.cs" />
+    <Compile Include="Interfaces\IInvestigatorRepository.cs" />
+    <Compile Include="Interfaces\ISuspectRepository.cs" />
+    <Compile Include="Interfaces\IWorldRepository.cs" />
     <Compile Include="Models\InterrogationRoom.cs" />
     <Compile Include="Models\Investigator.cs" />
     <Compile Include="Models\Suspect.cs" />
